@@ -1,0 +1,261 @@
+* {
+    font-family: Archivo, sans-serif;
+    font-weight: 500;
+}
+
+.container-fluid img{
+    width: 120px;
+    height: 38px;
+}
+
+.navbar-text-color{
+    color: #000000;
+}
+
+input.padding-input{
+    width: 100%;
+    padding: 10px 30px 10px 50px;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+img.input-img-shopbag{
+    margin-top: 4px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    bottom: 35%;
+    right: 14%;
+}
+
+img.input-img-search {
+    position: relative;
+    margin-top: 9px;
+    width: 25px;
+    height: 25px;
+    right: 85%;
+}
+
+img.input-img-division {
+    position: relative;
+    margin-top: 9px;
+    width: 3px;
+    height: 25px;
+    right: 28%;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 700px;
+}
+
+.main-text-container{
+    position: relative;
+    padding-top:5%;
+    padding-left:13%;
+}
+
+.main-text-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.text-img-icon{
+    margin-left:20px;
+    margin-top: 10px;;
+    height: 50px;
+}
+
+.abril-font{
+    font-family: 'Abril Fatface', cursive;
+}
+
+.abril-size-small{
+font-size: 45px;
+}
+
+.abril-size-medium{
+ font-size: 65px;
+ margin-top: -20px;
+}
+
+.abril-size-big{
+    margin-top: -30px;
+    font-size: 96px;
+    color: #CDB590;
+}
+
+.styled-main-text-paragraph{
+    margin-top: -10px;
+    color: #7B7B7B;
+    font-weight: 400;
+    max-width: 300px;
+    line-height: 18px;
+}
+
+.main-image-fitter{
+    order: 1;
+    height: 500px;
+    object-fit: contain;
+    margin-top:3%;
+    margin-left: 3%;
+    margin-right: 13%;
+    
+}
+
+::placeholder{
+    padding-left: 10%;
+}
+
+p{
+    margin-bottom: 0px;
+}
+
+.main-button-container{
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.most-rated-button{
+    margin-left: 60px;
+    margin-top: 15px;
+    transition: ease-in-out 1s;
+}
+
+.most-rated-button button {
+    border-style: none;
+    background-color: transparent; 
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.most-rated-button img{
+    margin-top: -5%;
+}
+
+.main-button-img{
+    margin-left: -45px;
+    margin-top: -8px;
+}
+
+.main-button-content{
+    transition: ease-in-out 1s;
+}
+
+.main-button{
+    text-align: left;
+    padding-left: 30px;
+    border-style: none;
+    color: white;
+    width: 240px;
+    height: 54px;
+    left: 107px;
+    top: 536px;
+    font-weight: 400;
+    font-size: 20px;
+
+    background: linear-gradient(270deg, #27423F 0%, #36726B 115.32%);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 992px) {
+    .main-button-container{
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .most-rated-button img {
+            margin-top: -1%;
+    }
+
+    .main-button-container {
+            flex-direction: column;
+            margin-top: 8%;
+    }
+
+    .abril-size-small{
+        font-size: 38px;
+    }
+}
+
+@media  only screen and (max-width: 992px){
+    img.input-img-search {
+        bottom: 12%;
+        right: 93%;
+    }
+
+    .main-container{
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .main-image-fitter {
+        margin-right: 13px;
+        order: 0;
+    }
+
+    .main-text-container{
+        margin-top: 10px;
+        padding-top: 0px;
+        padding-left: 8%;
+    }
+
+    .main-text-icon{
+        text-align: center;
+    }
+
+    .styled-main-text-paragraph{
+        text-align: left;
+    }
+
+    .main-button{
+        text-align: left;
+        margin-top: -15px;  
+    }
+
+    .most-rated-button{
+        margin-top: 2%;
+        margin-left: 0;
+    }
+
+    .most-rated-button > img{
+        margin-top: -5px;
+        margin-left: 5px;
+    }
+
+    .main-button-container{
+        flex-direction: column;
+        margin-top: 35px;
+    }
+
+        .abril-size-small {
+            margin-top: 10px;
+            font-size: 33px;
+        }
+}
+
+@media only screen and (max-width: 400px){
+    .main-image-fitter{
+        margin-top: -10%;
+    }
+
+    .main-text-container{
+        margin-top: -10%;
+        padding-left: 15px;
+    }
+}
+
+.most-rated-button button:hover{
+    color: #36726B;
+    transition: ease-in-out 1s;
+}
+
+.main-button-content:hover{
+    opacity: 0.8;
+    transition: ease-in-out 1s;
+}
