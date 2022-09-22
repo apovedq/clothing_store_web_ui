@@ -3,28 +3,28 @@
     font-weight: 500;
 }
 
-h5{
+h5 {
     margin-top: -6%;
     font-weight: 700;
     margin-left: 5%;
 }
 
-h4{
+h4 {
     color: #336A64;
     margin-left: 20px;
     font-weight: 700;
 }
 
-.container-fluid img{
+.container-fluid img {
     width: 120px;
     height: 38px;
 }
 
-.navbar-text-color{
+.navbar-text-color {
     color: #000000;
 }
 
-input.padding-input{
+input.padding-input {
     width: 100%;
     padding: 10px 30px 10px 50px;
     border-radius: 50px;
@@ -32,7 +32,7 @@ input.padding-input{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-img.input-img-shopbag{
+img.input-img-shopbag {
     margin-top: 4px;
     position: relative;
     width: 30px;
@@ -57,50 +57,51 @@ img.input-img-division {
     right: 28%;
 }
 
-.main-container{
+.main-container {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     height: 700px;
 }
 
-.main-text-container{
+.main-text-container {
     position: relative;
-    padding-top:5%;
-    padding-left:13%;
+    padding-top: 5%;
+    padding-left: 13%;
 }
 
-.main-text-icon{
+.main-text-icon {
     display: flex;
     flex-direction: row;
 }
 
-.text-img-icon{
-    margin-left:20px;
-    margin-top: 10px;;
+.text-img-icon {
+    margin-left: 20px;
+    margin-top: 10px;
+    ;
     height: 50px;
 }
 
-.abril-font{
+.abril-font {
     font-family: 'Abril Fatface', cursive;
 }
 
-.abril-size-small{
-font-size: 45px;
+.abril-size-small {
+    font-size: 45px;
 }
 
-.abril-size-medium{
- font-size: 65px;
- margin-top: -20px;
+.abril-size-medium {
+    font-size: 65px;
+    margin-top: -20px;
 }
 
-.abril-size-big{
+.abril-size-big {
     margin-top: -30px;
     font-size: 96px;
     color: #CDB590;
 }
 
-.styled-main-text-paragraph{
+.styled-main-text-paragraph {
     margin-top: -10px;
     color: #7B7B7B;
     font-weight: 400;
@@ -108,31 +109,31 @@ font-size: 45px;
     line-height: 18px;
 }
 
-.main-image-fitter{
+.main-image-fitter {
     order: 1;
     height: 500px;
     object-fit: contain;
-    margin-top:3%;
+    margin-top: 3%;
     margin-left: 3%;
     margin-right: 13%;
-    
+
 }
 
-::placeholder{
+::placeholder {
     padding-left: 10%;
 }
 
-p{
+p {
     margin-bottom: 0px;
 }
 
-.main-button-container{
+.main-button-container {
     margin-top: 8%;
     display: flex;
     flex-direction: row;
 }
 
-.most-rated-button{
+.most-rated-button {
     margin-left: 60px;
     margin-top: 15px;
     transition: ease-in-out 1s;
@@ -140,25 +141,25 @@ p{
 
 .most-rated-button button {
     border-style: none;
-    background-color: transparent; 
+    background-color: transparent;
     text-decoration: underline;
     font-size: 18px;
 }
 
-.most-rated-button img{
+.most-rated-button img {
     margin-top: -5%;
 }
 
-.main-button-img{
+.main-button-img {
     margin-left: -45px;
     margin-top: -8px;
 }
 
-.main-button-content{
+.main-button-content {
     transition: ease-in-out 1s;
 }
 
-.image-fitter-clothes-selection{
+.image-fitter-clothes-selection {
     margin-top: 2%;
     height: 70px;
     object-fit: contain;
@@ -173,7 +174,7 @@ p{
     height: 100px;
 }
 
-.main-button{
+.main-button {
     text-align: left;
     padding-left: 30px;
     border-style: none;
@@ -190,7 +191,7 @@ p{
     border-radius: 25px;
 }
 
-.clothes-type-mobile{
+.clothes-type-mobile {
     display: none;
 }
 
@@ -198,21 +199,22 @@ p{
     margin-top: 15px;
     height: 50px;
     object-fit: contain;
+    transition: ease-in-out 0.5s;
 }
 
-.p-card-style{
+.p-card-style {
     color: #7B7B7B;
     font-size: 16px;
     margin-left: 20px;
     text-align: left;
 }
 
-.card-style{
+.card-style {
     margin-top: 5%;
     max-width: 390px;
 }
 
-.clothes-card-selector{
+.clothes-card-selector {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -222,50 +224,184 @@ p{
     margin-top: 200px;
     height: 50px;
     object-fit: contain;
-    
+
 }
 
 .clothes-card-mobile {
     display: none;
 }
 
+.page-choosing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+
+.page-selector {
+    display: flex;
+    flex-direction: row;
+    margin-top: -50px;
+    margin-left: 15%;
+}
+
+.page-selector h4 {
+    margin-top: 50px;
+    margin: 0px 60px;
+    color: #7B7B7B;
+}
+
+.page-selector h4 span {
+    font-weight: 800;
+    color: #336A64;
+}
+
+.see-all-products-button {
+    margin-right: 10%;
+    object-fit: contain;
+    transition: ease-in-out 0.5s;
+}
+
+.call-to-action-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.call-to-action-text {
+    left: 0;
+    text-align: right;
+    margin-top: 65px;
+    margin-right: 2%;
+}
+
+.call-to-action-text p {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 65px;
+    margin-top: -20px;
+
+}
+
+.call-to-action-column {
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.call-to-action-column p {
+    margin-top: 10%;
+    margin-left: 3%;
+    font-weight: 300;
+    max-width: 300px;
+    margin-bottom: 10%;
+}
+
+.call-to-action-column div {
+    flex-direction: row;
+}
+
+.call-to-action-column div img {
+    margin-left: -50px;
+}
+
+.call-to-action-fix {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    background-color: black;
+    height: 250px;
+    margin-top: -10%;
+}
+
+footer .footer-p-align {
+    margin-top: 200px;
+}
+
+footer p {
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+}
+
+.footer-name-tag {
+    font-weight: 900;
+    font-size: 22px;
+    color: #268b7f;
+}
+
+footer p span {
+    color: gray;
+}
+
+.contact-me-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-me-links img {
+    height: 30px;
+    object-fit: contain;
+    transition: ease-in-out 0.2s;
+}
+
 @media only screen and (max-width: 1300px) and (min-width: 992px) {
 
-    .main-button-container{
+    .main-button-container {
         flex-direction: column;
         align-items: left;
     }
 
     .image-fitter-clothes-selection {
-            height: 60px;
+        height: 60px;
     }
 
     .most-rated-button img {
-            margin-top: -1%;
+        margin-top: -1%;
     }
 
     .main-button-container {
-            flex-direction: column;
-            margin-top: 8%;
+        flex-direction: column;
+        margin-top: 8%;
     }
 
-    .abril-size-small{
+    .abril-size-small {
         font-size: 38px;
     }
 
-    .clothes-type-mobile{
+    .clothes-type-mobile {
+        display: none;
+    }
+
+    .clothes-card-selector {
+        display: none;
+    }
+
+    .degradade-page-selector {
+        display: none;
+    }
+
+    .page-selector {
         display: none;
     }
 
     .clothes-card-mobile {
-            display: none;
+        margin-top: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
     }
 }
 
-@media  only screen and (max-width: 992px){
-    h5{
+@media only screen and (max-width: 992px) {
+    h5 {
         margin-left: 8%;
-     margin-top: 6%;
+        margin-top: 6%;
     }
 
     img.input-img-search {
@@ -273,7 +409,7 @@ p{
         right: 93%;
     }
 
-    .main-container{
+    .main-container {
         flex-direction: column;
         height: max-content;
     }
@@ -283,57 +419,65 @@ p{
         order: 0;
     }
 
-    .main-text-container{
+    .main-text-container {
         margin-top: 10px;
         padding-top: 0px;
         padding-left: 8%;
         padding-bottom: 0px;
     }
 
-    .main-text-icon{
+    .main-text-icon {
         text-align: center;
     }
 
-    .styled-main-text-paragraph{
+    .styled-main-text-paragraph {
         text-align: left;
     }
 
-    .main-button{
+    .main-button {
         text-align: left;
-        margin-top: -15px;  
+        margin-top: -15px;
     }
 
-    .most-rated-button{
+    .most-rated-button {
         margin-top: -3px;
         margin-left: 10%;
+        transition: ease-in-out 0.2s;
     }
 
-    .most-rated-button > img{
+    .most-rated-button>img {
         margin-top: -5px;
         margin-left: 5px;
     }
 
-    .main-button-container{
+    .main-button-container {
         flex-direction: row;
         margin-top: 35px;
     }
 
     .abril-size-small {
-            margin-top: 10px;
-            font-size: 33px;
+        margin-top: 10px;
+        font-size: 33px;
     }
 
-    .clothes-type-selector{
+    .clothes-type-selector {
         display: none;
     }
 
-    .clothes-card-selector{
+    .clothes-card-selector {
         display: none;
     }
 
+    .degradade-page-selector {
+        display: none;
+    }
 
-    .clothes-card-mobile{
-        margin-top: 10%;
+    .page-selector {
+        display: none;
+    }
+
+    .clothes-card-mobile {
+        margin-top: 3%;
         display: flex;
         flex-direction: row;
         justify-content: space-around
@@ -344,15 +488,70 @@ p{
         justify-content: space-around;
     }
 
-}
+    .card-img-style {
+        margin-left: 10%;
+        height: 400px;
+        object-fit: contain;
+        transform: scale(1.0);
+        transition: transform 5s, filter 3s ease-in-out;
 
-@media only screen and (max-width: 460px){
-
-    .clothes-type-selector{
-        display: none; 
     }
 
-    .clothes-type-mobile{
+    .call-to-action-section {
+        flex-direction: column;
+        margin-top: -3%;
+    }
+
+    .call-to-action-fix {
+        justify-content: center;
+    }
+
+    .call-to-action-column p {
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-left: 0%;
+        font-weight: 300;
+        max-width: 300px;
+        margin-bottom: 50px;
+    }
+
+    .call-to-action-fix img {
+        margin-top: 50px;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .call-to-action-text p {
+        font-family: 'Abril Fatface', cursive;
+        font-size: 3rem;
+        margin-top: -15px;
+
+    }
+
+        footer {
+            background-color: black;
+            height: 250px;
+            margin-top: -17%;
+        }
+
+}
+
+@media only screen and (max-width: 460px) {
+
+    .clothes-type-selector {
+        display: none;
+    }
+
+    .degradade-page-selector {
+        display: none;
+    }
+
+    .page-selector {
+        display: none;
+    }
+
+
+    .clothes-type-mobile {
         display: flex;
         justify-content: space-around;
     }
@@ -363,30 +562,115 @@ p{
         margin-left: 0px;
     }
 
-    .most-rated-button{
+    .most-rated-button {
         margin-top: 10px;
+        transition: ease-in-out 0.2s;
     }
 
-    .most-rated-text{
+    .most-rated-text {
         margin-left: -30px;
     }
 
-    .main-image-fitter{
+    .main-image-fitter {
         margin-top: -10%;
     }
 
-    .main-text-container{
+    .main-text-container {
         margin-top: -10%;
         padding-left: 15px;
     }
+
+    .card-arrow-size {
+        margin-top: 150px;
+        object-fit: contain;
+    }
+
+    .card-img-style {
+        justify-content: space-around;
+        margin-left: 5%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .clothes-card-mobile {
+        margin: 0px 20px;
+    }
+
+    .call-to-action-text p {
+        font-family: 'Abril Fatface', cursive;
+        font-size: 2rem;
+        margin-top: 5px;
+
+    }
+
+        footer {
+            background-color: black;
+            height: 250px;
+            margin-top: -25%;
+        }
 }
 
-.most-rated-button button:hover{
+.arrow-size:hover {
+    opacity: 0.6;
+    transition: ease-in-out 0.5s;
+}
+
+.card-arrow-size:hover {
+    opacity: 0.6;
+    transition: ease-in-out 0.5s;
+}
+
+.most-rated-button button:hover {
     color: #36726B;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 0.2s;
 }
 
-.main-button-content:hover{
+.main-button-content:hover {
     opacity: 0.8;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 0.2s;
+}
+
+h4:hover {
+    opacity: 0.8;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.contact-me-links img:hover {
+    opacity: 0.8;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.page-selector h4:hover {
+    color: #36726B;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.see-all-products-button:hover {
+    opacity: 0.6;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.card-img-style:hover {
+    object-fit: contain;
+    transform: scale(1.1);
+    transition: transform 5s, filter 3s ease-in-out;
+    cursor: pointer;
+}
+
+.image-fitter-clothes-selection:hover {
+    object-fit: contain;
+    transform: scale(1.1);
+    transition: transform 2s, filter 3s ease-in-out;
+    cursor: pointer;
+}
+
+.main-image-fitter:hover {
+    object-fit: contain;
+    transform: scale(1.1);
+    transition: transform 2s, filter 3s ease-in-out;
+    cursor: pointer;
 }
