@@ -1,41 +1,65 @@
-//Array with clothes 1. Hodies 2. All 3. t-shirt 4. Jeans 5. Sneakers
-const clothes_type_selector_imgs = ['./assets/hoodies_selection.png', './assets/all_selection.png', './assets/t-shirt_selection.png', './assets/jeans_selection.png', './assets/sneakers_selection.png'];
-let clothes_type_counter = 0;
+//Preguntas
 
-function clothes_type_carrousel(container) { 
-    container.addEventListener('click', e => {
-        let clothes_type_back_arrow = getElementById('clothes-type-back-arrow');
-        let clothes_type_next_arrow = getElementById('clothes-type-next-arrow');
-        let img = getElementById('clothes-type-selector-img');
+//1- Como centro mis elementos
+//2 - Como asocio los links que necesito
 
-        //Identifies what event you are trying to target 
-        let toggle_event = e.target;
 
-        if (toggle_event == clothes_type_back_arrow) { 
-            console.log("pulsando tecla back");
-            if (counter > 0) {
-                img.src = clothes_type_selector_imgs[clothes_type_counter - 1]
-                clothes_type_counter--;
-            } else { 
-                img.src = clothes_type_selector_imgs[clothes_type_selector_imgs.length - 1];
-                clothes_type_counter = clothes_type_selector_imgs.length - 1;
-            }
-        }
+window.addEventListener('load', function () { 
 
-        if (toggle_event == clothes_type_next_arrow) {
-            console.log("pulsando tecla next");
-            if (counter < clothes_type_selector_imgs.length - 1) {
-                img.src = clothes_type_selector_imgs[clothes_type_counter + 1]
-                clothes_type_counter++;
-            } else {
-                img.src = clothes_type_selector_imgs[0];
-                clothes_type_counter = 0;
-            }
+    //Define glider options to scroll.
+    new Glider(document.querySelector('.carousel__list'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
         }
     })
+})
+
+
+window.addEventListener("load", () => {
+    autoSlide();
+})
+
+function autoSlide() {
+    setInterval(() => {
+        slide(getItemActiveIndex() + 1);
+    }, 3000); // slide speed = 3s
 }
 
-document.addEventListener('DOMContentLoaded', () => { 
-    let clothes_type_event_container = getElementById('clothes-type-mobile');
-    clothes_type_carrousel(clothes_type_event_container);
-})
+function slide(toIndex) {
+    const itemsArray = Array.from(document.querySelectorAll(".carousel_item"));
+    const itemActive = document.querySelector(".carousel_item__active");
+
+    // check if toIndex exceeds the number of carousel items
+    if (toIndex >= itemsArray.length) {
+        toIndex = 0;
+    }
+
+    const newItemActive = itemsArray[toIndex];
+
+    // start transition
+    newItemActive.classList.add("carousel_item__pos_next");
+    setTimeout(() => {
+        newItemActive.classList.add("carousel_item__next");
+        itemActive.classList.add("carousel_item__next");
+    }, 40);
+
+    // remove all transition class and switch active class
+        newItemActive.addEventListener("transitionend", () => {
+        itemActive.className = "carousel_item";
+        newItemActive.className = "carousel_item carousel_item__active";
+    }, {
+        once: true
+    });
+}
+
+function getItemActiveIndex() {
+    const itemsArray = Array.from(document.querySelectorAll(".carousel_item"));
+    const itemActive = document.querySelector(".carousel_item__active");
+    const itemActiveIndex = itemsArray.indexOf(itemActive);
+    return itemActiveIndex;
+}

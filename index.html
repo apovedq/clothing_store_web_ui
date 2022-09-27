@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -55,11 +57,23 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Main image and text -->
     <section class="main-container">
 
-        <img class="main-image-fitter" src="./assets/main_image.png" alt="">
+        <div class="main-image-fitter">
+            <div class="carousel_inner">
+                <div class="carousel_item carousel_item__active">
+                    <img src="./assets/main_image.png" alt="" class="main-image-fitter">
+                </div>
+                <div class="carousel_item">
+                    <img src="./assets/main-image-2.png" alt="" class="main-image-fitter">
+                </div>
+                <div class="carousel_item">
+                    <img src="./assets/main-image-3.png" alt="" class="main-image-fitter">
+                </div>
+            </div>
+        </div>
 
 
         <div class="main-text-container">
@@ -102,61 +116,158 @@
             <img class="image-fitter-clothes-selection" src="./assets/jeans_selection.png">
             <img class="image-fitter-clothes-selection" src="./assets/sneakers_selection.png">
         </div>
-        
+
         <!-- Clothes type selector web mobile -->
         <div class="clothes-type-mobile">
-            <div id="clothes-type-back-arrow">
-                <img class="arrow-size" src="./assets/left-arrow-picker.png">
+
+            <div class="clothes-type-back-arrow">
+                <img class="arrow-size-left" src="./assets/left-arrow-picker.png">
             </div>
-            <img src="./assets/hoodies_selection.png" id="clothes-type-selector-img">
-            <div id="clothes-type-next-arrow">
-                <img class="arrow-size" src="./assets/right-arrow-picker.png">
+
+            <img src="./assets/hoodies_selection.png" class="clothes-type-selector-img" id="source-img">
+
+            <div class="clothes-type-next-arrow">
+                <img class="arrow-size-right" src="./assets/right-arrow-picker.png">
             </div>
+
         </div>
+
     </section>
 
-    <!-- Clothes card selector desktop-->
-    <div class = "clothes-card-selector">
+    <!--Clothes cards desktop -->
+    
+    <div class="clothes-card-selector">
 
-        <div class = card-style>
-            <img class = "card-img-style" src="./assets/1_card_img.png">
+        <div class="card border-fixed-cards" style="width: 18rem;">
+            <img src="./assets/1_card_img.png" class="card-img-top card-img-style" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">WG Sour Diesel</h4>
+                <p class="card-text">This collection is dedicated to growers and various of the strains preferred by
+                    many.</p>
+            </div>
+        </div>
+
+        <div class="card border-fixed-cards" style="width: 18rem;">
+            <img src="./assets/2_card_img.png" class="card-img-top card-img-style" alt="...">
+            <div class="card-body ">
+                <h4 class="card-title">WG The Candel</h4>
+                <p class="card-text">This Puzzle is perfect for a session, put it together and find Where is the candle?
+                    150 pieces + 18 years Material:
+                    Cardboard and paper.</p>
+            </div>
+        </div>
+
+        <div class="card border-fixed-cards" style="width: 18rem;">
+            <img src="./assets/3_card_img.png" class="card-img-top card-img-style" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">WG Gorilla Glue</h4>
+                <p class="card-text">Cannabic Dog Club is a collection dedicated to the best friends of all good Stoner
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <span class ="drag-indicator"> Drag to see others</span>
+    <!--Clothes cards Mobile -->
+    <div class="carousel">
+        <div class="carousel__contenedor">
+
+            <div class="carousel__list">
+                <div class="carousel__elemento">
+                    <img src="./assets/1_card_img.png" alt="Rock and Roll Hall of Fame" class="card-img-style">
+                    <div>
+                        <h4> WG Sour Diesel</h4>
+                        
+                        <p>This collection is dedicated to growers and various of the strains preferred by
+                        many</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="carousel__elemento">
+                    <img src="./assets/2_card_img.png" alt="Rock and Roll Hall of Fame" class="card-img-style">
+                    <div>
+                        <h4> WG The Candel</h4>
+                    
+                        <p>his Puzzle is perfect for a session, put it together and find Where is the candle?
+                        150 pieces + 18 years Material:
+                        Cardboard and paper</p>
+                    </div>
+                </div>
+
+                <div class="carousel__elemento">
+                    <img src="./assets/3_card_img.png" alt="Empire State Building" class="card-img-style">
+                    <div>
+                        <h4> WG The Candel</h4>
+                    
+                        <p>his Puzzle is perfect for a session, put it together and find Where is the candle?
+                            150 pieces + 18 years Material:
+                            Cardboard and paper</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div role="tablist" class="carousel__indicadores"></div>
+    </div>
+    
+
+
+    <!--
+            <div class="clothes-card-selector">
+
+        <div class=card-style>
+            <img class="card-img-style" src="./assets/1_card_img.png">
             <h4> WG Sour Diesel</h4>
-            <p class = "p-card-style"> This collection is dedicated to growers and various of the strains preferred by many</p>
+            <p class="p-card-style"> This collection is dedicated to growers and various of the strains preferred by
+                many</p>
         </div>
 
         <div class=card-style>
             <img class="card-img-style" src="./assets/2_card_img.png">
-            <h4> WG The Candel</h4>
-            <p class="p-card-style"> This collection is dedicated to growers and various of the strains preferred by many</p>
+            <h4> WC The Candel</h4>
+            <p class="p-card-style"> This Puzzle is perfect for a session, put it together and find Where is the candle?
+                150 pieces + 18 years Material:
+                Cardboard and paper</p>
         </div>
 
         <div class=card-style>
             <img class="card-img-style" src="./assets/3_card_img.png">
             <h4> WG Gorilla Glue </h4>
-            <p class="p-card-style"> This collection is dedicated to growers and various of the strains preferred by many</p>
+            <p class="p-card-style"> Cannabic Dog Club is a collection dedicated to the best friends of all good Stoner
+            </p>
         </div>
 
     </div>
 
     <!-- Clothes card selector mobile-->
+    <!--
     <div class="clothes-card-mobile">
         <div id="clothes-card-back-arrow">
             <img class="card-arrow-size" src="./assets/left-arrow-picker-green.png">
         </div>
-        
+
         <div class=card-style>
             <img class="card-img-style" src="./assets/1_card_img.png">
             <h4> WG Sour Diesel</h4>
-            <p class="p-card-style"> This collection is dedicated to growers and various of the strains preferred by many</p>
+            <p class="p-card-style"> This collection is dedicated to growers and various of the strains preferred by
+                many</p>
         </div>
 
         <div id="clothes-card-next-arrow">
             <img class="card-arrow-size" src="./assets/right-arrow-picker-green.png">
         </div>
-    </div>  
+    </div>
+            
+         -->
+    <!-- Clothes card selector desktop-->
+
 
     <!-- Clothes card page choosing-->
-    <div class = "page-choosing">
+    <div class="page-choosing">
 
         <div>
             <img class="degradade-page-selector" src="./assets/degadrade-rect.png" alt="">
@@ -168,14 +279,14 @@
             </div>
         </div>
 
-        <img class = "see-all-products-button"src="./assets/see_all_products.png" alt="">
+        <img class="see-all-products-button" src="./assets/see_all_products.png" alt="">
 
     </div>
-   
-    <!-- Call to action register -->
-    <section class="call-to-action-section" >
 
-        <div class = "call-to-action-fix">
+    <!-- Call to action register -->
+    <section class="call-to-action-section">
+
+        <div class="call-to-action-fix">
             <div class="call-to-action-text">
                 <p> Register</p>
                 <p> to get</p>
@@ -183,15 +294,15 @@
                 <p> 50%</p>
                 <p> Discount</p>
             </div>
-            
+
             <img src="./assets/discount_img.png">
         </div>
-        
 
-        <div class = "call-to-action-column">
+
+        <div class="call-to-action-column">
             <img src="./assets/tabler_shopping-cart-discount.png">
             <p> Register and find the best options regarding Colombian fashion, do not stay behind,
-            advance with fashion</p>
+                advance with fashion</p>
             <div>
                 <button class="main-button"> Register</button>
                 <img src="./assets/entypo_login.png">
@@ -199,21 +310,21 @@
 
         </div>
 
-        
+
     </section>
 
- 
+
     <footer>
-        <div class = "footer-p-align">
+        <div class="footer-p-align">
             <p> Colombia Latest Trends </p>
             <p> <span> Web Development Class 2022 </span> </p>
-            <p> developed by <span class = "footer-name-tag"> Andrés Poveda </span> </p>
+            <p> developed by <span class="footer-name-tag"> Andrés Poveda </span> </p>
             <p> Contact me</p>
         </div>
 
-        <div class = "contact-me-links">
+        <div class="contact-me-links">
             <img src="./assets/github.png" alt="Git Hub" href="https://github.com/apovedq">
-            <img src="./assets/mail.png" >
+            <img src="./assets/mail.png">
         </div>
     </footer>
 
@@ -222,10 +333,12 @@
         hacer que funcione el carrusel
     -->
 
-
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+        <script src="index.js"></script>
 </body>
 
 </html>

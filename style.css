@@ -66,6 +66,7 @@ img.input-img-division {
 
 .main-text-container {
     position: relative;
+    z-index: 1;
     padding-top: 5%;
     padding-left: 13%;
 }
@@ -111,11 +112,13 @@ img.input-img-division {
 
 .main-image-fitter {
     order: 1;
+    z-index: -1;
     height: 500px;
     object-fit: contain;
     margin-top: 3%;
     margin-left: 3%;
     margin-right: 13%;
+    margin-bottom: 7%;
 
 }
 
@@ -195,7 +198,14 @@ p {
     display: none;
 }
 
-.arrow-size {
+.arrow-size-left {
+    margin-top: 15px;
+    height: 50px;
+    object-fit: contain;
+    transition: ease-in-out 0.5s;
+}
+
+.arrow-size-right {
     margin-top: 15px;
     height: 50px;
     object-fit: contain;
@@ -215,6 +225,7 @@ p {
 }
 
 .clothes-card-selector {
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -231,6 +242,10 @@ p {
     display: none;
 }
 
+.clothes-card-mobile-2 {
+    display: none;
+}
+
 .page-choosing {
     display: flex;
     flex-direction: row;
@@ -238,6 +253,9 @@ p {
     margin-top: 50px;
 }
 
+.border-fixed-cards {
+    border-style: none;
+}
 
 .page-selector {
     display: flex;
@@ -350,6 +368,75 @@ footer p span {
     transition: ease-in-out 0.2s;
 }
 
+.carousel {
+    display: none;
+}
+
+.drag-indicator {
+    display: none;
+}
+
+/*--------------.carousel_inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}*/
+
+.carousel_inner {
+    max-width: 550px;
+    margin-top: -2%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel_inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.carousel_item {
+    position: relative;
+    float: left;
+    display: none;
+    width: 100%;
+    margin-right: -100%;
+}
+
+/* slide effect */
+.carousel_item__active,
+.carousel_item__pos_next {
+    display: block;
+}
+
+.carousel_item__pos_next {
+    left: 100%;
+    transition: ease-in-out 0.5s;
+}
+
+.carousel_item__next {
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+/* fade effect */
+.carousel__fade .carousel_item__pos_next {
+    left: 0;
+    opacity: 0;
+}
+
+.carousel__fade .carousel_item__next {
+    transform: none;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.carousel__fade .carousel_item__active.carousel_item__next {
+    opacity: 0;
+}
+
+
 @media only screen and (max-width: 1300px) and (min-width: 992px) {
 
     .main-button-container {
@@ -390,15 +477,62 @@ footer p span {
         display: none;
     }
 
+    .clothes-card-mobile-2 {
+        display: fixed;
+    }
+
     .clothes-card-mobile {
         margin-top: 1%;
         display: flex;
         flex-direction: row;
         justify-content: space-around
     }
+
+    .carousel {
+        margin-left: 6%;
+        margin-top: 5%;
+        display: block;
+    }
+
+    .drag-indicator {
+        margin-top: 25px;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 35px;
+        text-align: center;
+        color: #268b7f;
+        font-weight: bold;
+        display: block;
+    }
+
+    .carousel__elemento{
+        display: flex;
+        flex-direction: row;
+    }
+    .carousel__elemento div {
+        margin-top: 15%;
+        margin-left: 5%;;
+    }
+
+        .carousel__elemento p {
+            max-width: 200px;
+        }
+
+    .carousel__elemento h4{
+        margin-left: -3px;
+    }
 }
 
 @media only screen and (max-width: 992px) {
+
+    .carousel_inner {
+        margin-top: 100px;
+        justify-content:center;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+
     h5 {
         margin-left: 8%;
         margin-top: 6%;
@@ -528,11 +662,50 @@ footer p span {
 
     }
 
-        footer {
-            background-color: black;
-            height: 250px;
-            margin-top: -17%;
+    footer {
+        background-color: black;
+        height: 250px;
+        margin-top: -17%;
+    }
+
+    .carousel {
+        margin-top: 5%;
+        display: block;
+    }
+
+        .drag-indicator {
+            margin-top: 25px;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 25px;
+            text-align: center;
+            color: #268b7f;
+            font-weight: bold;
+            display: block;
         }
+
+                .carousel__elemento {
+                    display: flex;
+                    flex-direction: column;
+                }
+        
+                .carousel__elemento div {
+                    margin-top: 5%;
+                    margin-left: 3%;
+                    
+                }
+        
+                .carousel__elemento p {
+                    margin-left: 15rem;
+                    text-align: center;
+                    max-width: 200px;
+                }
+        
+                .carousel__elemento h4 {
+                    text-align:center;
+                    margin-left: 0;
+                }
+
+
 
 }
 
@@ -603,11 +776,16 @@ footer p span {
 
     }
 
-        footer {
-            background-color: black;
-            height: 250px;
-            margin-top: -25%;
-        }
+    footer {
+        background-color: black;
+        height: 250px;
+        margin-top: -25%;
+    }
+
+    .carousel {
+        margin-top: 5%;
+        display: block;
+    }
 }
 
 .arrow-size:hover {
@@ -670,7 +848,7 @@ h4:hover {
 
 .main-image-fitter:hover {
     object-fit: contain;
-    transform: scale(1.1);
+    transform: scale(1.03);
     transition: transform 2s, filter 3s ease-in-out;
     cursor: pointer;
 }
