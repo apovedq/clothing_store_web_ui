@@ -504,20 +504,22 @@ footer p span {
         display: block;
     }
 
-    .carousel__elemento{
+    .carousel__elemento {
         display: flex;
         flex-direction: row;
     }
+
     .carousel__elemento div {
         margin-top: 15%;
-        margin-left: 5%;;
+        margin-left: 5%;
+        ;
     }
 
-        .carousel__elemento p {
-            max-width: 200px;
-        }
+    .carousel__elemento p {
+        max-width: 200px;
+    }
 
-    .carousel__elemento h4{
+    .carousel__elemento h4 {
         margin-left: -3px;
     }
 }
@@ -525,12 +527,14 @@ footer p span {
 @media only screen and (max-width: 992px) {
 
     .carousel_inner {
+        margin-left: 10%;
         margin-top: 100px;
-        justify-content:center;
-            max-width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
+        justify-content: center;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        float: center;
+    }
 
 
     h5 {
@@ -554,7 +558,7 @@ footer p span {
     }
 
     .main-text-container {
-        margin-top: 10px;
+        margin-top: -15px;
         padding-top: 0px;
         padding-left: 8%;
         padding-bottom: 0px;
@@ -673,37 +677,50 @@ footer p span {
         display: block;
     }
 
-        .drag-indicator {
-            margin-top: 25px;
-            font-family: 'Abril Fatface', cursive;
-            font-size: 25px;
-            text-align: center;
-            color: #268b7f;
-            font-weight: bold;
-            display: block;
-        }
+    .drag-indicator {
+        margin-top: 25px;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 25px;
+        text-align: center;
+        color: #268b7f;
+        font-weight: bold;
+        display: block;
+    }
 
-                .carousel__elemento {
-                    display: flex;
-                    flex-direction: column;
-                }
-        
-                .carousel__elemento div {
-                    margin-top: 5%;
-                    margin-left: 3%;
-                    
-                }
-        
-                .carousel__elemento p {
-                    margin-left: 15rem;
-                    text-align: center;
-                    max-width: 200px;
-                }
-        
-                .carousel__elemento h4 {
-                    text-align:center;
-                    margin-left: 0;
-                }
+    .carousel__elemento {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel__elemento div {
+        margin-top: 5%;
+        margin-left: 3%;
+
+    }
+
+    .carousel__elemento p {
+        margin-left: 15rem;
+        text-align: center;
+        max-width: 200px;
+    }
+
+    .carousel__elemento h4 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .carousel_inner {
+        max-width: 550px;
+        margin-top: -3%;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .main-image-fitter{
+        height: 400px;
+        object-fit: contain;
+    }
 
 
 
@@ -745,11 +762,18 @@ footer p span {
     }
 
     .main-image-fitter {
-        margin-top: -10%;
+        
+        height: 350px;
+        object-fit: contain;
+        margin-left: 0;
+        margin-top: 0%;
     }
 
-    .main-text-container {
+    .main-container{
         margin-top: -10%;
+    }
+    .main-text-container {
+        margin-top: 10%;
         padding-left: 15px;
     }
 
@@ -786,6 +810,13 @@ footer p span {
         margin-top: 5%;
         display: block;
     }
+
+         .carousel_inner {
+             margin-top: 15%;
+             position: relative;
+             width: 100%;
+             overflow: hidden;
+         }
 }
 
 .arrow-size:hover {

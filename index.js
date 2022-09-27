@@ -1,8 +1,8 @@
 //Preguntas
 
-//1- Como centro mis elementos
+//1- Como centro mis elementos de drag y texto
 //2 - Como asocio los links que necesito
-
+//3. Por que se me corta en responsive
 
 window.addEventListener('load', function () { 
 
