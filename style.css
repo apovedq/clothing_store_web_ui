@@ -512,7 +512,6 @@ footer p span {
     .carousel__elemento div {
         margin-top: 15%;
         margin-left: 5%;
-        ;
     }
 
     .carousel__elemento p {
@@ -693,13 +692,15 @@ footer p span {
     }
 
     .carousel__elemento div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 5%;
         margin-left: 3%;
 
     }
 
     .carousel__elemento p {
-        margin-left: 15rem;
         text-align: center;
         max-width: 200px;
     }
