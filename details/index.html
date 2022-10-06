@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -37,7 +37,7 @@
                             href="../index.html">Home</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link navbar-text-color" href="#">Sale</a>
+                        <a class="nav-link navbar-text-color" href="../products/products.html">Sale</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link navbar-text-color" href="#">About</a>
@@ -59,15 +59,50 @@
         </div>
     </nav>
 
-    </section>
+    <p class="breadCrumbs"> Home <a href="../products/products.html"> > Sale </a> > <span> Details </span> </p>
+   <div class="details-main-container">
+    <img src="" alt="" id="detail-product-img" class="card-img-style">
+        <div >
+            <h1 id="detail-product-title"> Name </h1>
+            <p id="detail-product-tag">Tag</p>
+            <p id="detail-product-description"> Description</p>
+            <p id="detail-product-price">$100</p>
+            <section>
+                <button id="detail-product-button"> Add to the Car</button>
+                <img src="" alt="">
+            </section>
+            
+        </div>
+   </div>
+
+<footer>
+    <div class="footer-p-align details-footer">
+        <p> Colombia Latest Trends </p>
+        <p> <span> Web Development Class 2022 </span> </p>
+        <p> developed by <span class="footer-name-tag"> Andrés Poveda </span> </p>
+        <p> Contact me</p>
+    </div>
+
+    <div class="contact-me-links">
+        <a href="https://github.com/apovedq">
+            <img src="../assets/github.png" alt="Git Hub">
+        </a>
+
+        <img src="../assets/mail.png">
+    </div>
+</footer>
+
+
     
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="./products.js"></script>
+
+    <script src="../products/products_list.js"></script>
+    <script src="./index.js"></script>
+    
     
     </body>
     

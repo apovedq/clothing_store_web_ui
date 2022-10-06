@@ -1,0 +1,3 @@
+1. Como hacer un toogle para cambiar el filtro 
+3. Como hacer que se pueda hacer mientras se completa
+2. Como importar la lista de otra variable 
