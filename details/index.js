@@ -19,7 +19,7 @@ function renderProduct() {
 
     title.textContent = product_detail.name;
     tag.textContent = product_detail.tag;
-    price.textContent = product_detail.price;
+    price.textContent = (`${'$ '} ${product_detail.price}`);
     description.textContent = product_detail.description;
 
     img.setAttribute('src', product_detail.imageURL);

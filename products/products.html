@@ -60,16 +60,45 @@
 
     <!--Filter -->
     <section class="products-filter">
+
         <form action="" onsubmit="return false">
             <input type="text" id="search-products" placeholder="Tag">
         </form>
 
         <div class="filter-box">
-            <a href="" class="filter-button filter-button-active" data-filter="all">All</a>
-            <a href="" class="filter-button" data-filter="hoodie"> Hoodie </a>
-            <a href="" class="filter-button" data-filter="t-shirt"> Tshirt </a>
-            <a href="" class="filter-button" data-filter="shorts"> Shorts </a>
+
+            <select id="season-category">
+                <!--<div class="filter-box"> -->
+                <option value="" disabled selected hidden>Season</option>
+                <option value="summer"> <a href="" class="filter-button filter-button-active" data-filter="summer">Summer</a> </option>
+                <option value="autumn"> <a href="" class="filter-button" data-filter="autumn"> Atumn </a> </option>
+                <option value="winter"> <a href="" class="filter-button" data-filter="winter"> Winter </a> </option>
+                <!--</div> -->
+            </select>
+
+
+            <select id="category">
+                <!--<div class="filter-box"> -->
+                <option value="" disabled selected hidden>Category</option>
+                <option value="all"> <a href="" class="filter-button filter-button-active" data-filter="all">All</a> </option>
+                <option value="hoodie"> <a href="" class="filter-button" data-filter="hoodie"> Hoodie </a> </option>
+                <option value="t-shirt"> <a href="" class="filter-button" data-filter="t-shirt"> Tshirt </a> </option>
+                <option value="shorts"> <a href="" class="filter-button" data-filter="shorts"> Shorts </a> </option>
+                <!--</div> -->
+            </select>
+            
+            <select id="price-category">
+                <!--<div class="filter-box"> -->
+                <option value="" disabled selected hidden>Filter by Price</option>
+                <option value="min-price"> <a href="" class="filter-button filter-button-active" data-filter="min-price">Min
+                        Price</a> </option>
+                <option value="max-price"> <a href="" class="filter-button filter-button-active" data-filter="max-price">Max
+                        Price</a></option>
+                <!--</div> -->
+            </select>
+
         </div>
+
     </section>
 
 
