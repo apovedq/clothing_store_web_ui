@@ -4,9 +4,10 @@ let product_detail;
 searchProduct();
 renderProduct();
 
-function searchProduct() { 
-    product_detail = products.find((item) => nameQueryParam === item.name);
+function searchProduct() {
+    product_detail = products.find((item) => { if (nameQueryParam === item.name) { return item } });
     console.log(product_detail);
+
 }
 
 function renderProduct() {

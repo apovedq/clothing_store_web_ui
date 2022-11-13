@@ -3,7 +3,7 @@
     font-weight: 500;
 }
 
-h5 {
+h5.main-page-h5 {
     margin-top: -6%;
     font-weight: 700;
     margin-left: 5%;
@@ -93,6 +93,30 @@ h4 {
     color: #000000;
 }
 
+.navbar-text-color-admin {
+    color: #d54b00;
+    font-weight: bold;
+}
+.cart-content{
+    display: flex;
+    flex-direction: row;
+        margin-bottom: 15px;
+}
+
+.cart-content img{
+max-width: 100px;
+object-fit: contain;
+border-radius: 50px;
+}
+
+.cart-content div {
+    margin-top: 30px;
+    margin-left: 15px;
+    display: column;
+    flex-direction: row;
+
+}
+
 .card-button-products {
     background: linear-gradient(270deg, #27423F 0%, #36726B 115.32%);
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
@@ -115,13 +139,18 @@ input.padding-input {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-img.input-img-shopbag {
-    margin-top: 4px;
+a img.input-img-shopbag {
+    top: 2px;
     position: relative;
     width: 30px;
     height: 30px;
     bottom: 35%;
-    right: 14%;
+    right: 46px;
+    cursor: pointer;
+}
+
+a img.input-img-shopbag:hover {
+   transform: opacity 0.2s ease-in-out;
 }
 
 img.input-img-search {

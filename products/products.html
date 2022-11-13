@@ -35,7 +35,7 @@
                         <a class="nav-link active mx-4 navbar-text-color" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link navbar-text-color" href="#">Sale</a>
+                        <a class="nav-link navbar-text-color" href="../products/products.html">Sale</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link navbar-text-color" href="#">About</a>
@@ -44,18 +44,100 @@
                         <a class="nav-link navbar-text-color" href="#">Contact</a>
                     </li>
     
+                    <li id="admin-access" class="nav-item mx-4">
+                        <a id="admin-access" class="nav-link navbar-text-color-admin" href="./admin">Admin</a>
+                    </li>
+    
                 </ul>
     
                 <!-- Input container -->
                 <div class="d-flex  me-5">
                     <input type="text" class="padding-input" placeholder="search">
-                    <img class="xp-4 input-img-shopbag" src="../assets/ant-design_shopping-outlined.png" alt="">
-                    <img class="input-img-division" src="../assets/rectangle.png" alt="">
-                    <img class="input-img-search" src="../assets/akar-icons_search.png" alt="">
+                    <a href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                        aria-controls="offcanvasWithBothOptions">
+                        <img class="xp-4 input-img-shopbag" src="./assets/ant-design_shopping-outlined.png" alt="">
+                    </a>
+                    <img class="input-img-division" src="./assets/rectangle.png" alt="">
+                    <img class="input-img-search" src="./assets/akar-icons_search.png" alt="">
                 </div>
             </div>
         </div>
     </nav>
+    
+    <!--  Log in  or cart content -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"> Already have an account? Log in</h5>
+    
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!--  Log in  content -->
+            <div id="sign-in-form">
+    
+                <form>
+                    <!-- Log in Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="loginName" class="form-control" />
+                        <label class="form-label" for="loginName">Email</label>
+                    </div>
+    
+                    <!--  Log in  Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="loginPassword" class="form-control" />
+                        <label class="form-label" for="loginPassword">Password</label>
+                    </div>
+    
+    
+                    <!-- Submit button -->
+                    <button id="sign-in-button" type="submit" class="btn btn-outline-success btn-block mb-4">Sign
+                        in</button>
+    
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Not a member? <a href="#!">Register</a></p>
+                    </div>
+                </form>
+    
+                <div class="mx-auto" style="max-width: 900px;">
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="registerEmail" class="form-control" />
+                            <label class="form-label" for="registerEmail">Email</label>
+                        </div>
+    
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="registerPassword" class="form-control" />
+                            <label class="form-label" for="registerPassword">Password</label>
+                        </div>
+    
+                        <!-- Register Submit button -->
+                        <button id="register-button" type="submit"
+                            class="btn btn-outline-primary btn-block mb-3">Register</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Selected items and log aut -->
+            <div id="selected-items">
+                <div class="cart-content">
+                    <img src="./assets/cartImgExample.JPG" alt="">
+                    <div>
+                        <h5>Camisa True</h5>
+                        <p> $34.000</p>
+                    </div>
+                </div>
+                <div id="sing-out-form" class="mx-auto" style="max-width: 900px;">
+                    <button id="sign-out-button" type="submit" class="btn btn-outline-danger btn-block mb-4">Log
+                        Out</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
 
 
     <!--Filter -->
