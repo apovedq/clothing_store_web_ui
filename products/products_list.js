@@ -4,7 +4,8 @@ const products = [
         tag: "hoodie",
         name: "Manzanilla Art",
         description: "Linea Botánica, Coleccion de Hierbas, Hoodie 100% Algodon, ¿Qué esperas?",
-        price: "$350,000",
+        price: "350.000",
+        season: "winter"
     },
 
     {
@@ -12,7 +13,8 @@ const products = [
         tag: "t-shirt",
         name: "Lavanda crudo",
         description: "Linea Botánica, Coleccion de Hierbas, Hoodie 100% Algodon, ¿Qué esperas?",
-        price: "$110,000",
+        price: "110.000",
+        season: "autumn"
     },
 
     {
@@ -20,7 +22,8 @@ const products = [
         tag: "shorts",
         name: "Manzanilla negro",
         description: "Linea Botánica, Coleccion de Hierbas, Hoodie 100% Algodon, ¿Qué esperas?",
-        price: "$100,000",
+        price: "100.000",
+        season: "summer"
     },
 
     {
@@ -28,7 +31,8 @@ const products = [
         tag: "hoodie",
         name: "Bomber Jacket",
         description: "De estilo bomber, esta chaqueta se integra a TRUE, Sientete TRUE, VIVE TRUE",
-        price: "$330.000",
+        price: "330.000",
+        season: "winter"
     },
 
     {
@@ -36,7 +40,8 @@ const products = [
         tag: "shorts",
         name: "Board Shorts - Waves",
         description: "Está hecho en un tejido fluidopensado para las exigencias de la playa, el sol o la piscina.",
-        price: "$130.000",
+        price: "130.000",
+        season: "summer"
     },
 
     {
@@ -44,7 +49,8 @@ const products = [
         tag: "t-shirt",
         name: "Love Story",
         description: "Llega con una silueta de corte clásico con bordado tipográfico frontal",
-        price: "$140.000",
+        price: "140.000",
+        season: "summer"
     },
 
     {
@@ -52,7 +58,8 @@ const products = [
         tag: "shorts",
         name: "Cargo nude",
         description: "Está hecho en un tejido fluidopensado para las exigencias de la playa, el sol o la piscina.",
-        price: "$130.000",
+        price: "130.000",
+        season: "summer"
     },
 
     {
@@ -60,7 +67,8 @@ const products = [
         tag: "t-shirt",
         name: "La Vie en Rose",
         description: "Posee bordados tipográficos en punto corazón y espalda. La mejor amiga",
-        price: "$115.000",
+        price: "115.000",
+        season: "winter"
     },
 
     {
@@ -68,7 +76,8 @@ const products = [
         tag: "hoodie",
         name: "Microdose",
         description: "De estilo bomber, esta chaqueta se integra a TRUE, Sientete TRUE, VIVE TRUE",
-        price: "$330.000",
+        price: "330.000",
+        season: "autumn"
     },
 ]
 

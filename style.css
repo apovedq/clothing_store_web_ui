@@ -3,7 +3,7 @@
     font-weight: 500;
 }
 
-h5 {
+h5.main-page-h5 {
     margin-top: -6%;
     font-weight: 700;
     margin-left: 5%;
@@ -14,18 +14,18 @@ h4 {
     font-weight: 700;
 }
 
-#detail-product-title{
-   font-weight: 900;
+#detail-product-title {
+    font-weight: 900;
     font-size: 52px;
 }
 
-#detail-product-tag{
+#detail-product-tag {
     color: #268b7f;
     font-size: 36px;
 }
 
 #detail-product-description {
-    color:black ;
+    color: black;
     margin-top: 5%;
     width: 70%;
     font-size: 36px;
@@ -46,7 +46,7 @@ h4 {
     font-weight: 900;
 }
 
-#detail-product-button{
+#detail-product-button {
     color: white;
     font-size: 24px;
     border-radius: 15px;
@@ -57,20 +57,26 @@ h4 {
     border-style: none;
 }
 
-.details-main-container div{
+.details-main-container div {
     width: 30%;
     margin-left: 5%;
     margin-bottom: 5%;
 }
 
+.products-filter-blacked {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    background-color: black;
+}
 
-
-.details-main-container div section{
+.details-main-container div section {
     margin-top: 5%;
     display: flex;
     flex-direction: row;
 }
-.details-main-container{
+
+.details-main-container {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -87,7 +93,31 @@ h4 {
     color: #000000;
 }
 
-.card-button-products{
+.navbar-text-color-admin {
+    color: #d54b00;
+    font-weight: bold;
+}
+.cart-content{
+    display: flex;
+    flex-direction: row;
+        margin-bottom: 15px;
+}
+
+.cart-content img{
+max-width: 100px;
+object-fit: contain;
+border-radius: 50px;
+}
+
+.cart-content div {
+    margin-top: 30px;
+    margin-left: 15px;
+    display: column;
+    flex-direction: row;
+
+}
+
+.card-button-products {
     background: linear-gradient(270deg, #27423F 0%, #36726B 115.32%);
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 
@@ -109,13 +139,18 @@ input.padding-input {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-img.input-img-shopbag {
-    margin-top: 4px;
+a img.input-img-shopbag {
+    top: 2px;
     position: relative;
     width: 30px;
     height: 30px;
     bottom: 35%;
-    right: 14%;
+    right: 46px;
+    cursor: pointer;
+}
+
+a img.input-img-shopbag:hover {
+   transform: opacity 0.2s ease-in-out;
 }
 
 img.input-img-search {
@@ -308,12 +343,12 @@ p {
     justify-content: space-around;
 }
 
-.set-size-card{
-    height:600px;
+.set-size-card {
+    height: 600px;
     object-fit: contain;
 }
 
-.justify-content-cards{
+.justify-content-cards {
     width: 18rem;
     display: flex;
     flex-direction: column;
@@ -324,7 +359,7 @@ p {
 }
 
 
-#product-container-page{
+#product-container-page {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
@@ -360,17 +395,17 @@ p {
     border-style: none;
 }
 
-.card-tag{
+.card-tag {
     text-align: center;
     color: #268b7f;
     margin-top: -5%;
     margin-bottom: 3%;
 }
 
-.card-priece{
+.card-priece {
     text-align: center;
     color: #856205;
-    font-weight:900;
+    font-weight: 900;
     font-size: 18px;
     margin-bottom: 4%;
     margin-top: 4%;
@@ -556,36 +591,54 @@ footer p span {
     opacity: 0;
 }
 
-.products-filter{
+.products-filter {
     width: 100%;
+    background-color: #27423F;
     height: 50px;
-    background-color: #27423F ;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-#search-products{
+#search-products {
     margin-top: 12px;
     margin-left: -45%;
     border-style: none;
     border-radius: 12px;
-    height:25px;
+    height: 25px;
 }
 
-.filter-box{
+.filter-box {
     display: flex;
-    justify-content:space-around;
-    margin-top: 15px;
+    justify-content: space-around;
+    margin-top: 7px;
 }
 
-.filter-button{
+.filter-box select {
+
+    height: 35px;
+    margin: 0 5%;
+    border-radius: 10px;
+    color: gray;
+    padding: 0 10px;
+}
+
+.filter-box select option {
+    margin: 10px 0;
+}
+
+.filter-button {
     color: white;
     margin: 0 20%;
 }
 
-.filter-button-active{
+.filter-button-active {
     color: #5bb9ae
+}
+
+.price-filter-button {
+    margin-top: 12px;
+    color: #5bb9ae;
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 992px) {
@@ -673,6 +726,8 @@ footer p span {
         margin-left: -3px;
     }
 }
+
+
 
 @media only screen and (max-width: 992px) {
 
@@ -869,16 +924,74 @@ footer p span {
         overflow: hidden;
     }
 
-    .main-image-fitter{
+    .main-image-fitter {
         height: 400px;
         object-fit: contain;
     }
 
+    .products-filter {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    #search-products {
+        margin-left: 0%;
+    }
+
+.filter-box select {
+    margin: 3% 2%; 
+    border-color: white;
+}
+
+    .filter-box select option {
+        margin: 0 0;
+
+    }
+
+    .details-main-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #detail-product-img{
+        margin: 5% 0;
+        height: 300px;
+    }
+
+         #detail-product-description{
+            font-size: 18px;
+         }
+
+         #detail-product-title{
+            margin: 0 0;
+            font-size: 38px;
+         }
+
+        .details-main-container div {
+            width: 100%;
+            margin-left: 0%;
+           display: flex;
+           flex-direction: column;
+           text-align: center;
+           align-items: center;
+           margin-bottom: -5%;
+        }
+
+        #detail-product-button{
+            width: 250px;
+        }
 
 }
 
 @media only screen and (max-width: 460px) {
+
+
+    .products-filter {
+        flex-direction: column;
+    }
+
 
     .clothes-type-selector {
         display: none;
@@ -914,16 +1027,17 @@ footer p span {
     }
 
     .main-image-fitter {
-        
+
         height: 350px;
         object-fit: contain;
         margin-left: 0;
         margin-top: 0%;
     }
 
-    .main-container{
+    .main-container {
         margin-top: -10%;
     }
+
     .main-text-container {
         margin-top: 10%;
         padding-left: 15px;
@@ -963,12 +1077,12 @@ footer p span {
         display: block;
     }
 
-         .carousel_inner {
-             margin-top: 15%;
-             position: relative;
-             width: 100%;
-             overflow: hidden;
-         }
+    .carousel_inner {
+        margin-top: 15%;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 .arrow-size:hover {
@@ -1008,6 +1122,7 @@ h4:hover {
     transition: ease-in-out 0.2s;
     cursor: pointer;
 }
+
 .breadCrumbs {
     font-size: 12px;
     margin-top: 2%;
@@ -1049,7 +1164,8 @@ h4:hover {
     cursor: pointer;
 }
 
-.card-button-products:hover{
+.card-button-products:hover {
     opacity: 0.6;
-    transition: ease-in-out 0.5s;;
+    transition: ease-in-out 0.5s;
+    ;
 }
