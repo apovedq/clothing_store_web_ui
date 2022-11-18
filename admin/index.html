@@ -20,132 +20,178 @@
 <body>
 
     <!-- navbar -->
-<nav class="navbar navbar-expand-lg py-4" style="background-color: #F6F6F6;">
-    <div class="container-fluid">
-        <img class="mx-5" src="../assets/Logo.png">
+    <nav class="navbar navbar-expand-lg py-4" style="background-color: #F6F6F6;">
+        <div class="container-fluid">
+            <img class="mx-5" src="../assets/Logo.png">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse space-navbar" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active mx-4 navbar-text-color" aria-current="page" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link navbar-text-color" href="../products/products.html">Sale</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link navbar-text-color" href="#">About</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link navbar-text-color" href="#">Contact</a>
-                </li>
+            <div class="collapse navbar-collapse space-navbar" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4 navbar-text-color" aria-current="page"
+                            href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link navbar-text-color" href="../products/products.html">Sale</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link navbar-text-color" href="#">About</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link navbar-text-color" href="#">Contact</a>
+                    </li>
 
-                <li id="admin-access" class="nav-item mx-4">
-                    <a id="admin-access" class="nav-link navbar-text-color-admin" href="./admin">Admin</a>
-                </li>
+                    <li id="admin-access" class="nav-item mx-4">
+                        <a id="admin-access" class="nav-link navbar-text-color-admin" href="./admin">Admin</a>
+                    </li>
 
-            </ul>
+                </ul>
 
-            <!-- Input container -->
-            <div class="d-flex  me-5">
-                <input type="text" class="padding-input" placeholder="search">
-                <a href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions">
-                    <img class="xp-4 input-img-shopbag" src="./assets/ant-design_shopping-outlined.png" alt="">
-                </a>
-                <img class="input-img-division" src="./assets/rectangle.png" alt="">
-                <img class="input-img-search" src="./assets/akar-icons_search.png" alt="">
+                <!-- Input container -->
+                <div class="d-flex  me-5">
+                    <input type="text" class="padding-input" placeholder="search">
+                    <a href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                        aria-controls="offcanvasWithBothOptions">
+                        <img class="xp-4 input-img-shopbag" src="../assets/ant-design_shopping-outlined.png" alt="">
+                    </a>
+                    <img class="input-img-division" src="../assets/rectangle.png" alt="">
+                    <img class="input-img-search" src="../assets/akar-icons_search.png" alt="">
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!--  Log in  or cart content -->
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-    aria-labelledby="offcanvasWithBothOptionsLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"> Already have an account? Log in</h5>
+    <!--  Log in  or cart content -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"> Already have an account? Log in</h5>
 
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <!--  Log in  content -->
-        <div id="sign-in-form">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!--  Log in  content -->
+            <div id="sign-in-form">
 
-            <form>
-                <!-- Log in Email input -->
-                <div class="form-outline mb-4">
-                    <input type="email" id="loginName" class="form-control" />
-                    <label class="form-label" for="loginName">Email</label>
-                </div>
-
-                <!--  Log in  Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="loginPassword" class="form-control" />
-                    <label class="form-label" for="loginPassword">Password</label>
-                </div>
-
-
-                <!-- Submit button -->
-                <button id="sign-in-button" type="submit" class="btn btn-outline-success btn-block mb-4">Sign
-                    in</button>
-
-                <!-- Register buttons -->
-                <div class="text-center">
-                    <p>Not a member? <a href="#!">Register</a></p>
-                </div>
-            </form>
-
-            <div class="mx-auto" style="max-width: 900px;">
                 <form>
-                    <!-- Email input -->
+                    <!-- Log in Email input -->
                     <div class="form-outline mb-4">
-                        <input type="email" id="registerEmail" class="form-control" />
-                        <label class="form-label" for="registerEmail">Email</label>
+                        <input type="email" id="loginName" class="form-control" />
+                        <label class="form-label" for="loginName">Email</label>
                     </div>
 
-                    <!-- Password input -->
+                    <!--  Log in  Password input -->
                     <div class="form-outline mb-4">
-                        <input type="password" id="registerPassword" class="form-control" />
-                        <label class="form-label" for="registerPassword">Password</label>
+                        <input type="password" id="loginPassword" class="form-control" />
+                        <label class="form-label" for="loginPassword">Password</label>
                     </div>
 
-                    <!-- Register Submit button -->
-                    <button id="register-button" type="submit"
-                        class="btn btn-outline-primary btn-block mb-3">Register</button>
+
+                    <!-- Submit button -->
+                    <button id="sign-in-button" type="submit" class="btn btn-outline-success btn-block mb-4">Sign
+                        in</button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Not a member? <a href="#!">Register</a></p>
+                    </div>
                 </form>
-            </div>
-        </div>
 
-        <!-- Selected items and log aut -->
-        <div id="selected-items">
-            <div class="cart-content">
-                <img src="./assets/cartImgExample.JPG" alt="">
-                <div>
-                    <h5>Camisa True</h5>
-                    <p> $34.000</p>
+                <div class="mx-auto" style="max-width: 900px;">
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="registerEmail" class="form-control" />
+                            <label class="form-label" for="registerEmail">Email</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="registerPassword" class="form-control" />
+                            <label class="form-label" for="registerPassword">Password</label>
+                        </div>
+
+                        <!-- Register Submit button -->
+                        <button id="register-button" type="submit"
+                            class="btn btn-outline-primary btn-block mb-3">Register</button>
+                    </form>
                 </div>
             </div>
-            <div id="sing-out-form" class="mx-auto" style="max-width: 900px;">
-                <button id="sign-out-button" type="submit" class="btn btn-outline-danger btn-block mb-4">Log
-                    Out</button>
+
+            <!-- Selected items and log aut -->
+            <div id="selected-items">
+                <div class="cart-content">
+                    <img src="../assets/cartImgExample.JPG" alt="">
+                    <div>
+                        <h5>Camisa True</h5>
+                        <p> $34.000</p>
+                    </div>
+                </div>
+                <div id="sing-out-form" class="mx-auto" style="max-width: 900px;">
+                    <button id="sign-out-button" type="submit" class="btn btn-outline-danger btn-block mb-4">Log
+                        Out</button>
+                </div>
             </div>
+
+        </div>
+    </div>
+
+
+    <div class="admin-input-container">
+    
+        <div class="input-group mb-3">
+            <span class="input-group-text" >Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" id="admin-name"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <select id="admin-tag" class="form-select form-select-sm mb-3 " aria-label=".form-select-sm example">
+            <option disabled selected hidden>Tag</option>
+            <option value="t-shirt">T-Shirt</option>
+            <option value="hoodie">Hoodie</option>
+            <option value="shorts">Shorts</option>
+        </select>
+    
+        <select id="admin-season" class="form-select form-select-sm mb-3 " aria-label=".form-select-sm example">
+            <option disabled selected hidden>Season</option>
+            <option value="winter">Winter</option>
+            <option value="autumn">Autumn</option>
+            <option value="summer">Summer</option>
+        </select>
+    
+        <div class="input-group mb-3">
+            <span class="input-group-text" >Price</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" id="admin-price">
+        </div>
+    
+        <div class="input-group mb-3">
+            <span class="input-group-text">Description</span>
+            <textarea id="admin-description" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+    
+    
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Upload product image</label>
+            <input id="admin-img" class="form-control" type="file" accept="image/png, image/jpeg">
         </div>
 
+        <button type="button" id="add-product-admin" class="btn btn-success mb-5">Upload product</button>
+
+
+        <div id="succes-message-admin" class="alert alert-success role="alert">
+            <h4 class="alert-heading mb-5"">Well done!</h4>
+            <p>Things working just fine. Product uploaded.</p>
+        </div>
+
+
     </div>
-</div>
 
 
-
-
-    <!-- navbar -->
-    <p class="breadCrumbs"> Home ><span> Admin </span> </p>
-
-    
     <footer>
         <div class="footer-p-align">
             <p> Colombia Latest Trends </p>
@@ -168,9 +214,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="./products_list.js"></script>
-    <script src="./products.js"></script>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="../firebase/index.js"></script>
 
 
 </body>

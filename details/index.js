@@ -1,5 +1,6 @@
 let nameQueryParam = new URLSearchParams(window.location.search).get('name');
 let product_detail;
+import { products } from '../products/products_list.js'
 
 searchProduct();
 renderProduct();
@@ -22,7 +23,11 @@ function renderProduct() {
     tag.textContent = product_detail.tag;
     price.textContent = (`${'$ '} ${product_detail.price}`);
     description.textContent = product_detail.description;
-
-    img.setAttribute('src', product_detail.imageURL);
+    img.setAttribute('src', product_detail.imgUrl);
 
 }
+
+const addToCartButton = getElementById('detail-product-button');
+addToCartButton.addEventListener('click', () => { 
+    
+})

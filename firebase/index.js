@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js"
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyCyE7UUEym8TyQU9twXc0qKnvqe-lfLNSo",
@@ -19,9 +19,9 @@ const firebaseConfig = {
 
 //Initialization
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth(app);
+const storage = getStorage(app);
 
 //User id
 let uid;
@@ -155,3 +155,32 @@ function validateAdmin(user) {
 }
 
 
+export async function getAllProducts() {
+    const querySnapshot = await getDocs(collection(db, "products"));
+    const mappedArray = [];
+    querySnapshot.forEach((doc) => {
+        // console.log(doc.id, " => ", doc.data());
+        mappedArray.push(doc.data());
+    });
+
+    return mappedArray;
+}
+
+
+//Add item to cart
+const cartContainer = document.getElementById("cart-content");
+
+
+async function addDBCart(name, price, url) {
+    try {
+        const docRef = await setDoc(doc(db, "cart", name), {
+            name: name,
+            price: price,
+            imgUrl: url
+        });
+
+    } catch (e) {
+        console.error("Error adding document", e)
+    }
+
+}

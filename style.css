@@ -114,7 +114,10 @@ border-radius: 50px;
     margin-left: 15px;
     display: column;
     flex-direction: row;
+}
 
+.admin-input-container{
+    margin: 10px 150px;
 }
 
 .card-button-products {

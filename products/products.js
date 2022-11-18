@@ -1,4 +1,4 @@
-
+import {products} from "./products_list.js"
 
 let myProducts;
 myProducts = products;
@@ -13,7 +13,7 @@ function displayProduct() {
     myProducts.forEach(product => {
         const card = document.createElement('div');
         card.className = `card border-fixed-cards justify-content-cards ${product.tag} ${product.season}`;
-        card.innerHTML = `<img src="${product.imageURL}" class="card-img-top card-img-style" alt="...">
+        card.innerHTML = `<img src="${product.imgUrl}" class="card-img-top card-img-style" alt="...">
             <div class="card-body justify-content-cards space-between-cards">
                 <p class="card-tag"> ${product.tag} </p>
                 <h4 class="card-title">${product.name}</h4>
