@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
+import { getFirestore, collection, getDocs, getDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js"
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js"
+import { getStorage, ref, uploadBytes, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyCyE7UUEym8TyQU9twXc0qKnvqe-lfLNSo",
@@ -89,7 +89,7 @@ function newUser(email, password) {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            console.log(user)
+           // console.log(user)
             // ...
         })
         .catch((error) => {
@@ -122,9 +122,10 @@ function singInUser(email, password) {
 //Firebase Check user status
     onAuthStateChanged(auth, (user) => {
         if (user) {
+            uid = user.uid;
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/firebase.User
-            validateAdmin(user.uid);
+            validateAdmin( uid);
             titleLogIn.textContent = "Items selected";
             signInForm.style.display = "none";
             selectedItems.style.display = "block";
@@ -168,16 +169,62 @@ export async function getAllProducts() {
 
 
 //Add item to cart
-const cartContainer = document.getElementById("cart-content");
 
+export async function drawUserCart() {
+    const cartContainer = document.getElementById("cart-content");
+    cartContainer.innerHTML = ``;
 
-async function addDBCart(name, price, url) {
+    let currentCart = await getUserCart();
+    console.log(currentCart);
+
+    let cartDisplay = currentCart.forEach((obj) => {
+        // console.log(doc.id, " => ", doc.data());
+        const cartObj = document.createElement('div');
+        cartObj.innerHTML = `<img src="${obj.url}" alt="">
+                        <section>
+                            <h5>${obj.name}</h5>
+                            <p>${obj.price}</p>
+                        </section>`
+
+        cartContainer.appendChild(cartObj);
+    });
+
+}
+
+export async function getUserCart() { 
+   
+    const docRef = doc(db, "users", uid);
+    const docSnap = await getDoc(docRef);
+    //console.log(docSnap); 
+    if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
+        return docSnap.data().cart;
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+        return undefined;
+    }
+}
+
+export async function addDBCart(name, price, url) {
+    let cart = await getUserCart();
+    
+    
     try {
-        const docRef = await setDoc(doc(db, "cart", name), {
-            name: name,
-            price: price,
-            imgUrl: url
-        });
+        if (cart) { 
+            const docRef = await setDoc(doc(db, "users", uid), {
+                cart: [
+                    ...cart,
+                    { name, price, url }
+                ]
+            });
+        } else { 
+            const docRef = await setDoc(doc(db, "users", uid), {
+                cart: [
+                    { name, price, url }
+                ]
+            });
+        }
 
     } catch (e) {
         console.error("Error adding document", e)

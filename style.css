@@ -97,7 +97,7 @@ h4 {
     color: #d54b00;
     font-weight: bold;
 }
-.cart-content{
+.cart-content div{
     display: flex;
     flex-direction: row;
         margin-bottom: 15px;
@@ -109,7 +109,7 @@ object-fit: contain;
 border-radius: 50px;
 }
 
-.cart-content div {
+.cart-content section{
     margin-top: 30px;
     margin-left: 15px;
     display: column;

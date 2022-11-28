@@ -1,4 +1,7 @@
 import {products} from "./products_list.js"
+import {drawUserCart } from '../firebase/index.js';
+
+drawUserCart();
 
 let myProducts;
 myProducts = products;
