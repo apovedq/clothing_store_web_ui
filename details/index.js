@@ -10,6 +10,7 @@ searchProduct();
 renderProduct();
 
 function searchProduct() {
+    //Busco en mi lista de productos.
     product_detail = products.find((item) => { if (nameQueryParam === item.name) { return item } });
 
 }

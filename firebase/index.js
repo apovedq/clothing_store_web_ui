@@ -155,7 +155,7 @@ function validateAdmin(user) {
     }
 }
 
-
+//Traer todos los productos desde la base de datos
 export async function getAllProducts() {
     const querySnapshot = await getDocs(collection(db, "products"));
     const mappedArray = [];
@@ -191,6 +191,7 @@ export async function drawUserCart() {
 
 }
 
+//Funcion para traer la informacion del usuario en la base de datos
 export async function getUserCart() { 
    
     const docRef = doc(db, "users", uid);
@@ -206,6 +207,7 @@ export async function getUserCart() {
     }
 }
 
+//Añadir al carro del usuario
 export async function addDBCart(name, price, url) {
     let cart = await getUserCart();
     
